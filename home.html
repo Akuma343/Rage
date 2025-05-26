@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="ragelogo.png" type="image/x-icon">
+
+  <title>RAGE FITNESS - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("navigation.html");
+    });
+  </script>
+
+  <section id="home" class="hero">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="gymvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>DARE TO BE DIFFERENT</h2>
+      <p>24 Hours Gym Access | Circuit Class | Boxing Fitness Class</p>
+    
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p>At RAGE FITNESS, we believe in breaking limits. Located in Tagum City, our state-of-the-art facility is open 24 Hours to match your lifestyle.</p>
+      <a href="about.html" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Our Services -->
+  <section id="services" class="section dark-bg">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <i class="fas fa-dumbbell"></i>
+          <h3>Personal Training</h3>
+          <p>One-on-one training sessions with our expert trainers.</p>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-users"></i>
+          <h3>Group Classes</h3>
+          <p>High-energy group workouts for all fitness levels.</p>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Cardio Training</h3>
+          <p>State-of-the-art cardio equipment and programs.</p>
+        </div>
+      </div>
+      <a href="services.html" class="btn">View All Services</a>
+    </div>
+  </section>
+
+  <!-- Promos -->
+  <section id="promos" class="section">
+    <div class="container">
+      <h2>Current Promos</h2>
+      <div class="promo-box">
+        <h3>🔥 Graveyard Rate</h3>
+        <p>Enjoy discounted access from <strong>12 Midnight to 6AM</strong>.</p>
+        <a href="promos.html" class="btn">View All Promos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>RAGE FITNESS</h3>
+          <p>Transform your body, transform your life.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tagum City, Philippines</p>
+          <p><i class="fas fa-phone"></i> 0912-345-6789</p>
+          <p><i class="fas fa-envelope"></i> info@ragefitness.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 RAGE FITNESS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

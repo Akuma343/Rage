@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Rage Fitness Gym</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Updated Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Fonts & Base */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Container */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    /* Login Section */
+    .login-hero {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .login-content {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* Card Style Login Box */
+    .login-box {
+      background-color: #1f1f1f;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid #2e2e2e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .login-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255, 0, 0, 0.2);
+    }
+
+    .login-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    .login-form input:focus {
+      outline: none;
+      border-color: #ff0000;
+    }
+
+    /* Password Toggle */
+    .password-container {
+      position: relative;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center; /* Ensure the icon is vertically aligned with the input */
+    }
+
+    .password-container input {
+      padding-right: 40px; /* Adjust spacing for icon */
+      width: 100%; /* Make sure the input takes up the full width */
+    }
+
+    .toggle-eye {
+      position: absolute;
+      top: 40%;
+      right: 50px; /* Ensure it is near the right edge of the input */
+      transform: translateY(-50%); /* Vertically center the icon */
+      cursor: pointer;
+      font-size: 20px;
+      color: #777;
+      transition: color 0.3s ease;
+    }
+
+    .toggle-eye:hover {
+      color: #333;
+    }
+
+    .toggle-eye:active {
+      color: #4CAF50;
+    }
+
+    .password-container input:focus + .toggle-eye {
+      color: #4CAF50;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background: #ff0000;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      background: #cc0000;
+    }
+
+    .login-note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .login-note a {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+
+    .error-msg {
+      color: #ff4d4d;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+      .login-box {
+        padding: 30px;
+      }
+
+      .login-title {
+        font-size: 30px;
+      }
+
+      .login-form input {
+        font-size: 14px;
+        padding: 16px;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 12px;
+      }
+
+      .login-note {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .login-box {
+        padding: 25px;
+      }
+
+      .login-title {
+        font-size: 28px;
+      }
+
+      .login-form input {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      .btn {
+        font-size: 16px;
+        padding: 12px;
+      }
+
+      .login-note {
+        font-size: 12px;
+      }
+
+      /* Smaller toggle eye icon on mobile */
+      .toggle-eye {
+        font-size: 16px; /* Smaller size on smaller screens */
+        right: 15px; /* Adjust position */
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        height: auto;
+      }
+
+      .login-box {
+        padding: 20px;
+        margin-top: 130px;
+      }
+
+      .login-title {
+        font-size: 24px;
+      }
+
+      .login-form input {
+        font-size: 14px;
+        padding: 14px;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .login-note {
+        font-size: 12px;
+      }
+
+      .login-hero {
+        padding: 20px;
+        height: auto;
+      }
+
+      /* Even smaller toggle eye icon on very small screens */
+      .toggle-eye {
+        font-size: 14px; /* Further smaller size for very small screens */
+        right: 10px; /* Further adjust position for smaller screens */
+      }
+    }
+  </style>
+</head>
+<body class="login-body">
+
+  <div class="container">
+    <section class="login-hero">
+      <div class="login-content">
+        <div class="login-box">
+          <h2 class="login-title">Welcome Back, Warrior</h2>
+          <form class="login-form" onsubmit="return checkCredentials(event)">
+            <input type="email" id="email" placeholder="Email" required />
+
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Password" required />
+              <i class="fa-solid fa-eye toggle-eye" id="togglePassword" onclick="togglePassword()"></i>
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+            <p class="login-note">Don't have an account? <a href="signup.html">Sign up</a></p>
+            <p class="login-note"><a href="forgot-password.html">Forgot Password?</a></p>
+            <p id="error-msg" class="error-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function checkCredentials(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const errorMsg = document.getElementById("error-msg");
+
+      // Get users from cookie
+      const existingUsers = getCookie("users");
+      if (!existingUsers) {
+        errorMsg.textContent = "Invalid email or password.";
+        return false;
+      }
+
+      const users = JSON.parse(existingUsers);
+      const user = users.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        // Store logged in user info
+        setCookie("currentUser", JSON.stringify({ email: user.email, fullname: user.fullname }), 1);
+        window.location.href = "home.html";
+      } else {
+        errorMsg.textContent = "Invalid email or password.";
+      }
+
+      return false;
+    }
+
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePassword");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+      }
+    }
+
+    // Cookie helper functions
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+  </script>
+
+</body>
+</html>

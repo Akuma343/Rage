@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Rage Fitness Gym</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Reusing the same styles from login.html */
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .signup-hero {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .signup-content {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .signup-box {
+      background-color: #1f1f1f;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid #2e2e2e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .signup-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(255, 0, 0, 0.2);
+    }
+
+    .signup-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .signup-form input {
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    .signup-form input:focus {
+      outline: none;
+      border-color: #ff0000;
+    }
+
+    .password-container {
+      position: relative;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-container input {
+      padding-right: 40px;
+      width: 100%;
+    }
+
+    .toggle-eye {
+      position: absolute;
+      top: 40%;
+      right: 50px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 20px;
+      color: #777;
+      transition: color 0.3s ease;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 15px;
+      background: #ff0000;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      background: #cc0000;
+    }
+
+    .signup-note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .signup-note a {
+      color: #ff0000;
+      text-decoration: underline;
+    }
+
+    .error-msg {
+      color: #ff4d4d;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .success-msg {
+      color: #4CAF50;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .signup-box {
+        padding: 25px;
+      }
+      .signup-title {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="signup-hero">
+      <div class="signup-content">
+        <div class="signup-box">
+          <h2 class="signup-title">Join the Rage</h2>
+          <form class="signup-form" onsubmit="return handleSignup(event)">
+            <input type="text" id="fullname" placeholder="Full Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <div class="password-container">
+              <input type="password" id="password" placeholder="Password" required />
+              <i class="fa-solid fa-eye toggle-eye" id="togglePassword" onclick="togglePassword()"></i>
+            </div>
+            <div class="password-container">
+              <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+              <i class="fa-solid fa-eye toggle-eye" id="toggleConfirmPassword" onclick="toggleConfirmPassword()"></i>
+            </div>
+            <button type="submit" class="btn">Create Account</button>
+            <p class="signup-note">Already have an account? <a href="login.html">Login</a></p>
+            <p id="error-msg" class="error-msg"></p>
+            <p id="success-msg" class="success-msg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function handleSignup(event) {
+      event.preventDefault();
+      
+      const fullname = document.getElementById("fullname").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+      const errorMsg = document.getElementById("error-msg");
+      const successMsg = document.getElementById("success-msg");
+
+      // Reset messages
+      errorMsg.textContent = "";
+      successMsg.textContent = "";
+
+      // Validate passwords match
+      if (password !== confirmPassword) {
+        errorMsg.textContent = "Passwords do not match!";
+        return false;
+      }
+
+      // Check if user already exists
+      const existingUsers = getCookie("users");
+      let users = [];
+      
+      if (existingUsers) {
+        users = JSON.parse(existingUsers);
+        if (users.some(user => user.email === email)) {
+          errorMsg.textContent = "Email already registered!";
+          return false;
+        }
+      }
+
+      // Add new user
+      users.push({
+        fullname,
+        email,
+        password // In a real app, never store plain passwords!
+      });
+
+      // Save to cookie
+      setCookie("users", JSON.stringify(users), 30); // Store for 30 days
+
+      successMsg.textContent = "Account created successfully! Redirecting to login...";
+      
+      // Redirect to login after 2 seconds
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 2000);
+
+      return false;
+    }
+
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePassword");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+      }
+    }
+
+    function toggleConfirmPassword() {
+      const passwordInput = document.getElementById("confirmPassword");
+      const toggleIcon = document.getElementById("toggleConfirmPassword");
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("fa-eye");
+        toggleIcon.classList.add("fa-eye-slash");
+      } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("fa-eye-slash");
+        toggleIcon.classList.add("fa-eye");
+      }
+    }
+
+    // Cookie helper functions
+    function setCookie(name, value, days) {
+      let expires = "";
+      if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      const nameEQ = name + "=";
+      const ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+  </script>
+</body>
+</html> 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="ragelogo.png" type="image/x-icon">
+
+  <title>Rage Fitness Gym - Promos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("navigation.html");
+    });
+  </script>
+
+  <section id="home" class="hero">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="gymvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>PROMO PAGE</h2>
+      <p>24 Hours Gym Access | Circuit Class | Boxing Fitness Class</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Current Promotions</h2>
+      <p>Take advantage of our special offers and start your fitness journey today</p>
+
+      <div class="promos-grid">
+        <div class="promo-card featured">
+          <div class="promo-icon">
+            <i class="fas fa-moon"></i>
+          </div>
+          <h3>Graveyard Special</h3>
+          <div class="promo-price">
+            <span class="original">₱1,000</span>
+            ₱500
+          </div>
+          <p class="promo-details">Perfect for night owls and early birds! Access the gym during off-peak hours.</p>
+          <ul class="promo-features">
+            <li>Access from 12:00 AM to 6:00 AM</li>
+            <li>Full gym access</li>
+            <li>Basic equipment usage</li>
+            <li>Locker room access</li>
+          </ul>
+          <p class="promo-expiry">Valid until December 31, 2024</p>
+          <a href="membership.html" class="btn">Join Now</a>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3>Student Discount</h3>
+          <div class="promo-price">
+            <span class="original">₱800</span>
+            ₱700
+          </div>
+          <p class="promo-details">Special rates for students with valid ID. Stay fit while you study!</p>
+          <ul class="promo-features">
+            <li>Full gym access</li>
+            <li>Group class access</li>
+            <li>Student ID required</li>
+            <li>Flexible payment options</li>
+          </ul>
+          <p class="promo-expiry">Valid until January 31, 2025</p>
+          <a href="membership.html" class="btn">Join Now</a>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Group Membership</h3>
+          <div class="promo-price">
+            <span class="original">₱3,000</span>
+            ₱2,400
+          </div>
+          <p class="promo-details">Bring your friends and family! Special rates for groups of 3 or more.</p>
+          <ul class="promo-features">
+            <li>3+ members required</li>
+            <li>Full gym access</li>
+            <li>Group class access</li>
+            <li>Shared guest passes</li>
+          </ul>
+          <p class="promo-expiry">Limited time offer</p>
+          <a href="membership.html" class="btn">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-bg">
+    <div class="container">
+      <h2>Ready to Transform Your Life?</h2>
+      <p>Don't miss out on these amazing offers. Join RAGE FITNESS today!</p>
+      <a href="contact.html" class="btn" style="margin-top: 30px;">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>RAGE FITNESS</h3>
+          <p>Transform your body, transform your life.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tagum City, Philippines</p>
+          <p><i class="fas fa-phone"></i> 0912-345-6789</p>
+          <p><i class="fas fa-envelope"></i> info@ragefitness.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 RAGE FITNESS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function confirmLogout() {
+      return confirm("Are you sure you want to logout?");
+    }
+  </script>
+</body>
+</html>

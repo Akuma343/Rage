@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAGE FITNESS - Frequently Asked Questions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="ragelogo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Include Navigation -->
+    <div id="nav-placeholder"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $("#nav-placeholder").load("navigation.html");
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay loop muted playsinline class="background-video">
+            <source src="gymvid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="hero-content">
+            <h2>FAQ</h2>
+            <p>Frequently Asked Questions</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <p>Find answers to frequently asked questions about RAGE FITNESS</p>
+
+            <div class="faq-categories">
+                <div class="faq-category active" data-category="all">All Questions</div>
+                <div class="faq-category" data-category="membership">Membership</div>
+                <div class="faq-category" data-category="facilities">Facilities</div>
+                <div class="faq-category" data-category="classes">Classes</div>
+                <div class="faq-category" data-category="training">Training</div>
+            </div>
+
+            <div class="faq-container">
+                <!-- Membership Questions -->
+                <div class="faq-item" data-category="membership">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What are your membership rates?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer various membership options to suit your needs:</p>
+                        <ul>
+                            <li>Regular Rate: ₱1,000/month</li>
+                            <li>Graveyard Rate (12AM-6AM): ₱500/month</li>
+                            <li>Student Rate: ₱700/month (with valid ID)</li>
+                            <li>Group Membership: ₱2,400/month (3+ members)</li>
+                        </ul>
+                        <p>All memberships include 24/7 access to the gym, basic equipment usage, and locker room access.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="membership">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do you offer trial memberships?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a one-day trial pass for ₱50. This allows you to experience our facilities and equipment before committing to a membership. Please bring a valid ID and appropriate workout attire.</p>
+                    </div>
+                </div>
+
+                <!-- Facilities Questions -->
+                <div class="faq-item" data-category="facilities">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What facilities do you have?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our facility includes:</p>
+                        <ul>
+                            <li>State-of-the-art cardio equipment</li>
+                            <li>Complete range of strength training equipment</li>
+                            <li>Boxing area with punching bags</li>
+                            <li>Group class studio</li>
+                            <li>Locker rooms with showers</li>
+                            <li>Free parking area</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="facilities">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do you have parking available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we have parking available in the public market area. The parking area is accessible 24/7 and is free for all members.</p>
+                    </div>
+                </div>
+
+                <!-- Classes Questions -->
+                <div class="faq-item" data-category="classes">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What types of classes do you offer?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a variety of classes including:</p>
+                        <ul>
+                            <li>Circuit Training</li>
+                            <li>Boxing Fitness</li>
+                            <li>HIIT (High-Intensity Interval Training)</li>
+                            <li>Strength Training Classes</li>
+                            <li>Cardio Classes</li>
+                        </ul>
+                        <p>Class schedules are available at the front desk and on our website.</p>
+                    </div>
+                </div>
+
+                <!-- Training Questions -->
+                <div class="faq-item" data-category="training">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do you offer personal training?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer personal training sessions with our certified trainers. Our trainers can help you with:</p>
+                        <ul>
+                            <li>Personalized workout plans</li>
+                            <li>Nutrition guidance</li>
+                            <li>Form correction</li>
+                            <li>Goal setting and tracking</li>
+                        </ul>
+                        <p>Contact us for personal training rates and availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-category="training">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I need to be experienced to join?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No experience is necessary! We welcome members of all fitness levels. Our trainers are available to help you get started and ensure you're using equipment safely and effectively. We also offer beginner-friendly classes and can create a personalized program to help you achieve your fitness goals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-prompt">
+                <h3>Still Have Questions?</h3>
+                <p>Can't find what you're looking for? Our team is here to help!</p>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RAGE FITNESS</h3>
+                    <p>Transform your body, transform your life.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="membership.html">Membership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Tagum City, Philippines</p>
+                    <p><i class="fas fa-phone"></i> 0912-345-6789</p>
+                    <p><i class="fas fa-envelope"></i> info@ragefitness.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RAGE FITNESS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
+        // Category filtering
+        document.querySelectorAll('.faq-category').forEach(category => {
+            category.addEventListener('click', function() {
+                // Update active category
+                document.querySelectorAll('.faq-category').forEach(cat => cat.classList.remove('active'));
+                this.classList.add('active');
+
+                const selectedCategory = this.dataset.category;
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (selectedCategory === 'all' || item.dataset.category === selectedCategory) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="ragelogo.png" type="image/x-icon">
+
+  <title>RAGE FITNESS - Testimonials</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(145deg, #1a1a1a, #121212);
+      border-radius: 15px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      border: 1px solid #ff000022;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-10px);
+      border-color: #ff0000;
+      box-shadow: 0 0 30px #ff000033;
+    }
+
+    .testimonial-content {
+      color: #ccc;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ff0000;
+    }
+
+    .author-info h4 {
+      color: #ff0000;
+      margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+    }
+
+    .author-info p {
+      color: #999;
+      margin: 5px 0 0;
+      font-size: 14px;
+    }
+
+    .testimonial-rating {
+      color: #ff0000;
+      margin-top: 10px;
+    }
+
+    .testimonial-rating i {
+      margin-right: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Include Navigation -->
+  <div id="nav-placeholder"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("navigation.html");
+    });
+  </script>
+
+  <section id="home" class="hero">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="gymvid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-content">
+      <h2>SUCCESS STORIES</h2>
+      <p>Real results from real members</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Member Testimonials</h2>
+      <p>Hear from our members about their fitness journey with RAGE FITNESS</p>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="John Doe">
+          </div>
+          <div class="testimonial-content">
+            <h3>John Doe</h3>
+            <p class="member-since">Member since 2023</p>
+            <div class="testimonial-text">
+              <p>"Joining RAGE FITNESS was the best decision I've made for my health. The trainers are incredibly supportive and the community is amazing. I've lost 30 pounds and gained so much confidence!"</p>
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Weight Loss</span>
+              <span class="achievement-tag">Strength Gain</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://images.unsplash.com/photo-1571019613576-2b22c76fd955?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Sarah Smith">
+          </div>
+          <div class="testimonial-content">
+            <h3>Sarah Smith</h3>
+            <p class="member-since">Member since 2022</p>
+            <div class="testimonial-text">
+              <p>"The variety of classes and equipment at RAGE FITNESS keeps my workouts exciting. I've achieved fitness goals I never thought possible. The 24/7 access is perfect for my busy schedule!"</p>
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Fitness Goals</span>
+              <span class="achievement-tag">Class Enthusiast</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mike Johnson">
+          </div>
+          <div class="testimonial-content">
+            <h3>Mike Johnson</h3>
+            <p class="member-since">Member since 2024</p>
+            <div class="testimonial-text">
+              <p>"The personal training program at RAGE FITNESS has transformed my approach to fitness. My trainer's expertise and motivation have helped me build strength and improve my overall health significantly."</p>
+            </div>
+            <div class="achievement-tags">
+              <span class="achievement-tag">Personal Training</span>
+              <span class="achievement-tag">Strength Building</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark-bg">
+    <div class="container">
+      <h2>Start Your Success Story</h2>
+      <p>Join RAGE FITNESS today and begin your fitness journey</p>
+      <a href="membership.html" class="btn" style="margin-top: 30px;">Join Now</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>RAGE FITNESS</h3>
+          <p>Transform your body, transform your life.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tagum City, Philippines</p>
+          <p><i class="fas fa-phone"></i> 0912-345-6789</p>
+          <p><i class="fas fa-envelope"></i> info@ragefitness.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 RAGE FITNESS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

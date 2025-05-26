@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="ragelogo.png" type="image/x-icon">
+
+  <title>Rage Fitness Gym - Strength Training</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("#nav-placeholder").load("navigation.html");
+    });
+  </script>
+
+  <section class="hero">
+    <video autoplay loop muted playsinline class="background-video">
+      <source src="strenght.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+      <h2>UNLEASH YOUR TRUE STRENGTH</h2>
+      <p>Transform your body. Ignite your power. Join the #1 Strength Training Community in Tagum City!</p>
+      <a href="about.html#contact" class="btn">Get Your Free Trial</a>
+      <div class="hero-offer">
+        <span class="offer-badge">🔥 LIMITED TIME: 1st Month Only ₱800! 🔥</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="strength-programs container">
+    <h2>Why Choose Rage Strength?</h2>
+    <p class="section-intro">Experience world-class coaching, premium equipment, and a supportive community. Whether you're a beginner or a seasoned lifter, our programs are designed to help you smash your goals!</p>
+
+    <div class="strength-grid">
+      <div class="strength-card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Beginner Strength</h3>
+        <p>Perfect for those new to strength training:</p>
+        <ul>
+          <li>Basic form and technique training</li>
+          <li>Full-body workout routines</li>
+          <li>Progressive overload principles</li>
+          <li>Personal trainer guidance</li>
+        </ul>
+      </div>
+
+      <div class="strength-card">
+        <i class="fas fa-weight-hanging"></i>
+        <h3>Advanced Powerlifting</h3>
+        <p>For experienced lifters:</p>
+        <ul>
+          <li>Specialized programming</li>
+          <li>Competition preparation</li>
+          <li>Advanced technique refinement</li>
+          <li>Periodization training</li>
+        </ul>
+      </div>
+
+      <div class="strength-card">
+        <i class="fas fa-user-friends"></i>
+        <h3>Group Strength Classes</h3>
+        <p>Dynamic group training:</p>
+        <ul>
+          <li>Circuit training</li>
+          <li>HIIT strength workouts</li>
+          <li>Team-based challenges</li>
+          <li>Motivational atmosphere</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonial-ad container">
+    <h2>Success Stories</h2>
+    <div class="testimonial-box">
+      <img src="member1.jpg" alt="Happy Member" class="testimonial-img">
+      <blockquote>
+        <p>"Joining Rage Fitness Gym was the best decision I ever made! I gained strength, confidence, and a new family. The coaches truly care about your progress."</p>
+        <footer>- Alex, 28, Tagum City</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="equipment-showcase container">
+    <h2>Premium Equipment</h2>
+    <p class="section-intro">Train with the best equipment in the industry</p>
+    <div class="equipment-grid">
+      <div class="equipment-item">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Free Weights</h3>
+        <p>Dumbbells, barbells, and weight plates</p>
+      </div>
+      <div class="equipment-item">
+        <i class="fas fa-bolt"></i>
+        <h3>Power Racks</h3>
+        <p>For safe and effective compound lifts</p>
+      </div>
+      <div class="equipment-item">
+        <i class="fas fa-cogs"></i>
+        <h3>Machines</h3>
+        <p>Isolation and compound movement machines</p>
+      </div>
+      <div class="equipment-item">
+        <i class="fas fa-running"></i>
+        <h3>Functional Training</h3>
+        <p>Kettlebells, resistance bands, and more</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>RAGE FITNESS</h3>
+          <p>Transform your body, transform your life.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Tagum City, Philippines</p>
+          <p><i class="fas fa-phone"></i> 0912-345-6789</p>
+          <p><i class="fas fa-envelope"></i> info@ragefitness.com</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 RAGE FITNESS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
