@@ -15,7 +15,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $("#nav-placeholder").load("navigation.html");
+            $("#nav-placeholder").load("navigation.html", function() {
+                // Hide logout button on index page
+                $(".logout-btn").hide();
+            });
         });
     </script>
 
@@ -29,7 +32,7 @@
         <div class="hero-content">
             <h2>DARE TO BE DIFFERENT</h2>
             <p>24 Hours Gym Access | Circuit Class | Boxing Fitness Class</p>
-            <a href="membership.html" class="btn">Join Now</a>
+            <a href="login.html" class="btn">Join Now</a>
         </div>
     </section>
 
@@ -41,7 +44,7 @@
                 At <strong>RAGE FITNESS</strong>, we believe in breaking limits. Located in <strong>Tagum City</strong>, our state-of-the-art facility is open <strong>24 Hours</strong> to match your lifestyle.
                 Whether you're bulking, shredding, or starting your fitness journey, we've got you.
             </p>
-            <a href="about.html" class="btn">Learn More</a>
+            <a href="index.html" class="btn">Learn More</a>
         </div>
     </section>
 
@@ -50,27 +53,27 @@
         <div class="container">
             <h2>Our Services</h2>
             <div class="services-grid">
-                <a href="services.html#strength" class="service-box">
+                <a href="" class="service-box">
                     <i class="fas fa-dumbbell"></i>
                     <strong>Strength Training</strong>
                     <p>Build muscle, increase strength, and improve overall fitness.</p>
                 </a>
-                <a href="services.html#cardio" class="service-box">
+                <a href="" class="service-box">
                     <i class="fas fa-heartbeat"></i>
                     <strong>Cardio Programs</strong>
                     <p>Boost your heart health and endurance with our cardio programs.</p>
                 </a>
-                <a href="services.html#personal" class="service-box">
+                <a href="" class="service-box">
                     <i class="fas fa-user-friends"></i>
                     <strong>Personal Coaching</strong>
                     <p>Get tailored workouts and nutrition advice from our expert coaches.</p>
                 </a>
-                <a href="classes.html" class="service-box">
+                <a href="" class="service-box">
                     <i class="fas fa-users"></i>
                     <strong>Group Classes</strong>
                     <p>Join a group for high-energy fitness classes with friends.</p>
                 </a>
-                <a href="services.html#boxing" class="service-box">
+                <a href="" class="service-box">
                     <i class="fas fa-boxing-glove"></i>
                     <strong>Boxing Class</strong>
                     <p>Develop skills in boxing with intense, focused training.</p>
@@ -88,13 +91,13 @@
                     <i class="fas fa-moon"></i>
                     <h3>Graveyard Rate</h3>
                     <p>Enjoy discounted access from <strong>12 Midnight to 6AM</strong>. Perfect for night warriors!</p>
-                    <a href="promos.html" class="btn">View Details</a>
+                    <a href="index.html" class="btn">View Details</a>
                 </div>
                 <div class="promo-card">
                     <i class="fas fa-users"></i>
                     <h3>Group Discount</h3>
                     <p>Bring your friends! Get special rates for group memberships.</p>
-                    <a href="promos.html" class="btn">Learn More</a>
+                    <a href="index.html" class="btn">Learn More</a>
                 </div>
             </div>
         </div>
@@ -111,10 +114,10 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="membership.html">Membership</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="index.html">About Us</a></li>
+                        <li><a href="index.html">Membership</a></li>
+                        <li><a href="index.html">Contact</a></li>
+                        <li><a href="index.html">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
